@@ -29,5 +29,8 @@
                 uses: actions/setup-node@v3
                 with:
                   node-version: ${{ matrix.node-version }}
+
+              - run: mongod --dbpath=./data/db
+              - run: npm run dev
               - run: npm i
               - run: npm test
