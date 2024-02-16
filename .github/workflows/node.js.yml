@@ -32,10 +32,6 @@ jobs:
               uses: supercharge/mongodb-github-action@v1.10.0
               with:
                 mongodb-version: ${{matrix.mongodb-version}}
-            - name: mongo
-              uses: supercharge/mongodb-github-action@v1.10.0
-              with:
-                mongodb-version: ${{matrix.mongodb-version}}
        
-              - run: npm i
-              - run: npm run dev & npm test
+            - run: npm i
+            - run: npm run dev & npm test
